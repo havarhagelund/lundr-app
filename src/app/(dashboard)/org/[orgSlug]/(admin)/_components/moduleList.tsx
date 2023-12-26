@@ -22,6 +22,12 @@ export const ModuleList = () => {
             link: '/pm',
         },
         {
+            name: 'Contractors',
+            description: 'Manage contractors',
+            icon: 'hammer',
+            link: '/pm',
+        },
+        {
             name: 'Analytics',
             description: 'See stats across your workspace',
             icon: 'graph',
