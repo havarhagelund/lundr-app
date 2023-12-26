@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Info } from '@/app/(dashboard)/_components/info';
+import { Info } from '@/app/(dashboard)/[orgId]/_components/info';
 import { Separator } from '@/components/ui/separator';
-import { BoardList } from '@/app/(dashboard)/_components/boardList';
+import { BoardList } from '@/app/(dashboard)/[orgId]/_components/boardList';
 
 const OrgIdPage = () => {
     return (

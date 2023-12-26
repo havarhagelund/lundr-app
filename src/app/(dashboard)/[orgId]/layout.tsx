@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '@/app/(dashboard)/_components/sidebar';
+import Sidebar from '@/app/(dashboard)/[orgId]/_components/sidebar';
 
 const OrgLayout = ({ children }: { children: React.ReactNode }) => {
     return (

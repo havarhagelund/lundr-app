@@ -5,7 +5,7 @@ import {
     AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import SidebarItem from '@/app/(dashboard)/_components/sidebarItem';
+import SidebarItem from '@/app/(dashboard)/[orgId]/_components/sidebarItem';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';

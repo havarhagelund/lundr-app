@@ -1,7 +1,7 @@
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { Plus } from 'lucide-react';
-import MobileSidebar from '@/app/(dashboard)/_components/mobileSidebar';
+import MobileSidebar from '@/app/(dashboard)/[orgId]/_components/mobileSidebar';
 
 const Navbar = () => {
     return (

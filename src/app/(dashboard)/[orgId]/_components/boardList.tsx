@@ -1,8 +1,8 @@
 import { HelpCircle, User } from 'lucide-react';
 import { getBoards } from '@/data';
 import { useParams } from 'next/navigation';
-import { Hint } from '@/app/(dashboard)/_components/hint';
-import { FormPopover } from '@/app/(dashboard)/_components/formPopover';
+import { Hint } from '@/app/(dashboard)/[orgId]/_components/hint';
+import { FormPopover } from '@/app/(dashboard)/[orgId]/_components/formPopover';
 
 export const BoardList = () => {
     let params = useParams<{ orgId: string }>();
