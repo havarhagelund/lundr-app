@@ -10,19 +10,13 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Plus } from 'lucide-react';
+import { getOrgs } from '@/data';
 
 // TODO: Add orgs from API
 const Sidebar = () => {
-    const orgs: {
-        name: string;
-        id: string;
-        members?: string[];
-    }[] = [
-        { name: 'Org 1', id: 'org-1' },
-        { name: 'Org 2', id: 'org-2' },
-    ];
-
     const isLoaded = true; //TODO: Add loading state based on api fetching of orgs
+
+    const orgs = getOrgs();
 
     if (!isLoaded) {
         return (
@@ -42,7 +36,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="font-bold text-sm flex items-center justify-between mb-1">
+            <div className="font-semibold text-sm flex items-center justify-between mb-1">
                 <span className="">Workspaces</span>
                 <Button
                     asChild
