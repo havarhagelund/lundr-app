@@ -1,9 +1,11 @@
-const AuthLayout = ({ children }: {
-    children: React.ReactNode;
-}) => {
+import { ReactReadableStream } from "next/dist/server/stream-utils/node-web-streams-helper";
+import React from "react";
+
+const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
-        {children}
+    <div className={"h-screen flex items-center justify-center"}>
+      {children}
     </div>
   );
-}
+};
+export default AuthLayout;

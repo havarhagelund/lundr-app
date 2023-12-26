@@ -6,6 +6,8 @@ import { siteConfig } from "@/config/site";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// TODO: Some middleware to route based on logged in status and org status (see middleware.ts in repo)
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
