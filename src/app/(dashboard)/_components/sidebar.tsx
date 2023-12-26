@@ -23,7 +23,7 @@ const Sidebar = () => {
     <>
       <Accordion type="single" collapsible>
         {orgs.map((org) => (
-          <AccordionItem value={org.id}>
+          <AccordionItem value={org.id} key={org.id}>
             <AccordionTrigger>{org.name}</AccordionTrigger>
             <SidebarItem org={org} />
           </AccordionItem>

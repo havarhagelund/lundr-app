@@ -35,12 +35,15 @@ const SidebarItem = ({ org }: { org: org }) => {
   const tailwindClass: string =
     buttonVariants({ variant: "ghost" }) + "w-80 text-left";
 
-  console.log(tailwindClass);
-
   return (
     <AccordionContent className="pt-1 text-neutral-700">
       {tabs.map((tab) => (
-        <Button variant={"ghost"} asChild className={"justify-start"}>
+        <Button
+          key={tab.label}
+          variant={"ghost"}
+          asChild
+          className={"justify-start"}
+        >
           <Link href={tab.href} className={"w-full justify-start"}>
             {tab.icon}
             {tab.label}
