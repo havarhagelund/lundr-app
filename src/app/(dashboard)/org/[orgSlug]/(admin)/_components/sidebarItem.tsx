@@ -12,24 +12,24 @@ type org = {
 const SidebarItem = ({ org }: { org: org }) => {
     const tabs = [
         {
-            label: 'Boards',
+            label: 'Modules',
             icon: <Layout className="h-4 w-4 mr-2" />,
-            href: `/org/${org.id}`,
+            href: `/${org.id}`,
         },
         {
             label: 'Activity',
             icon: <Activity className="h-4 w-4 mr-2" />,
-            href: `/org/${org.id}/activity`,
+            href: `/${org.id}/activity`,
         },
         {
             label: 'Settings',
             icon: <Settings className="h-4 w-4 mr-2" />,
-            href: `/org/${org.id}/settings`,
+            href: `/${org.id}/settings`,
         },
         {
             label: 'Billing',
             icon: <CreditCard className="h-4 w-4 mr-2" />,
-            href: `/org/${org.id}/billing`,
+            href: `/${org.id}/billing`,
         },
     ];
 

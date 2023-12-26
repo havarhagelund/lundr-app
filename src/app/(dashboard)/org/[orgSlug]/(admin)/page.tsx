@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
-import { Info } from '@/app/(dashboard)/[orgId]/_components/info';
 import { Separator } from '@/components/ui/separator';
-import { BoardList } from '@/app/(dashboard)/[orgId]/_components/boardList';
+import { Info } from '@/app/(dashboard)/org/[orgSlug]/(admin)/_components/info';
+import { ModuleList } from '@/app/(dashboard)/org/[orgSlug]/(admin)/_components/moduleList';
 
 const OrgIdPage = () => {
     return (
@@ -10,7 +10,7 @@ const OrgIdPage = () => {
             <Info />
             <Separator className={'my-4'} />
             <div className={'px-2 md:px-4'}>
-                <BoardList />
+                <ModuleList />
             </div>
         </div>
     );

@@ -1,12 +1,33 @@
-import { HelpCircle, User } from 'lucide-react';
+import { HelpCircle, Package, User } from 'lucide-react';
 import { getBoards } from '@/data';
 import { useParams } from 'next/navigation';
-import { Hint } from '@/app/(dashboard)/[orgId]/_components/hint';
-import { FormPopover } from '@/app/(dashboard)/[orgId]/_components/formPopover';
+import Link from 'next/link';
+import { FormPopover } from '@/app/(dashboard)/org/[orgSlug]/(admin)/_components/formPopover';
+import { Hint } from '@/app/(dashboard)/org/[orgSlug]/(admin)/_components/hint';
 
-export const BoardList = () => {
-    let params = useParams<{ orgId: string }>();
-    const boards = getBoards(params.orgId);
+export const ModuleList = () => {
+    let params = useParams<{ orgSlug: string }>();
+
+    const modules = [
+        {
+            name: 'Sales',
+            description: 'Manage sales opportunities',
+            icon: 'deal',
+            link: '/sales',
+        },
+        {
+            name: 'Project Management',
+            description: 'Manage ongoing projects',
+            icon: 'project',
+            link: '/pm',
+        },
+        {
+            name: 'Analytics',
+            description: 'See stats across your workspace',
+            icon: 'graph',
+            link: '/analytics',
+        },
+    ];
 
     return (
         <div className={'space-y-4'}>
@@ -15,8 +36,8 @@ export const BoardList = () => {
                     'flex items-center font-semibold text-lg text-neutral-700'
                 }
             >
-                <User className={'h-6 w-6 mr-2'} />
-                Your boards
+                <Package className={'h-6 w-6 mr-2'} />
+                Your modules
             </div>
             <div
                 className={
@@ -30,12 +51,12 @@ export const BoardList = () => {
                             'aspect-video relative h-full w-full bg-muted rounded flex flex-col gap-y-1 items-center justify-center hover:opacity-75 transition'
                         }
                     >
-                        <p className={'text-sm'}>Create a new board</p>
-                        <p className={'text-xs'}>5 remaining</p>
+                        <p className={'text-sm'}>Add more modules</p>
+                        <p className={'text-xs'}>some info</p>
                         <Hint
                             sideOffset={40}
                             description={
-                                'Free workspaces can have up to 5 boards for unlimited boards upgrade to standard'
+                                'Add more modules to your workspace to get more functionality'
                             }
                         >
                             <HelpCircle
@@ -46,16 +67,18 @@ export const BoardList = () => {
                         </Hint>
                     </div>
                 </FormPopover>
-                {boards.map((board) => (
-                    <div
-                        key={board.id}
+                {modules.map((module) => (
+                    <Link
+                        href={params.orgSlug + module.link}
+                        key={module.name}
                         role={'button'}
                         className={
                             'aspect-video relative h-full w-full bg-muted rounded flex flex-col gap-y-1 items-center justify-center hover:opacity-75 transition'
                         }
                     >
-                        <p className={'text-sm'}>{board.name}</p>
-                    </div>
+                        <p className={'text-sm'}>{module.name}</p>
+                        <p className={'text-xs'}>{module.description}</p>
+                    </Link>
                 ))}
             </div>
         </div>

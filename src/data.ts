@@ -1,12 +1,12 @@
 let orgs = [
     {
         name: 'Signum',
-        id: '101',
+        id: 'signum',
         users: ['501', '502'],
     },
     {
         name: 'Spectre',
-        id: '102',
+        id: 'spectre',
         users: ['505'],
     },
 ];

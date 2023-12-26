@@ -5,12 +5,12 @@ import {
     AccordionTrigger,
 } from '@/components/ui/accordion';
 
-import SidebarItem from '@/app/(dashboard)/[orgId]/_components/sidebarItem';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Plus } from 'lucide-react';
 import { getOrgs } from '@/data';
+import SidebarItem from './sidebarItem';
 
 // TODO: Add orgs from API
 const Sidebar = () => {

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Building2, CreditCard } from 'lucide-react';
 import { Skeleton } from '@/components/ui/skeleton';
 

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
-import Sidebar from '@/app/(dashboard)/[orgId]/_components/sidebar';
+import Sidebar from '@/app/(dashboard)/org/[orgSlug]/(admin)/_components/sidebar';
 
 const MobileSidebar = () => {
     const onOpen = useMobileSidebar((state) => state.onOpen);
