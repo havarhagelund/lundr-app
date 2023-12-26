@@ -7,6 +7,7 @@ import {
 } from '@/components/ui/popover';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
+import { useToast } from '@/components/ui/use-toast';
 
 interface FormPopoverProps {
     children?: React.ReactNode;
@@ -21,6 +22,15 @@ export const FormPopover = ({
     align,
     sideOffset = 0,
 }: FormPopoverProps) => {
+    const { toast } = useToast();
+
+    const handleCreateBoard = () => {
+        toast({
+            title: 'Scheduled: Catch up',
+            description: 'Friday, February 10, 2023 at 5:57 PM',
+        });
+    };
+
     return (
         <Popover>
             <PopoverTrigger asChild>{children}</PopoverTrigger>
@@ -37,6 +47,7 @@ export const FormPopover = ({
                 >
                     Create board
                 </div>
+                <Button onClick={handleCreateBoard}>Create</Button>
                 <PopoverClose asChild>
                     <Button
                         className={

@@ -3,7 +3,7 @@ import Sidebar from '@/app/(dashboard)/_components/sidebar';
 
 const OrgLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <main
+        <div
             className={
                 'pt-20 md:pt-24 px-4 max-w-6xl 2xl:max-w-screen-xl mx-auto'
             }
@@ -14,7 +14,7 @@ const OrgLayout = ({ children }: { children: React.ReactNode }) => {
                 </div>
                 {children}
             </div>
-        </main>
+        </div>
     );
 };
 
